@@ -1,10 +1,9 @@
 import streamlit as st
 import pandas as pd
-import pickle
+import joblib
 
-# Load the trained model
-filename = r'knn_model.sav'
-loaded_model = pickle.load(open(filename, 'rb'))
+filename = 'filename.pkl'
+loaded_model = joblib.load(open(filename, 'rb'))
 
 # Define the correct column names
 columns = ['Delivery_Distance', 'Traffic_Congestion', 'Weather_Condition',
